@@ -8,9 +8,15 @@ function mostrar()
     var nombre;
 
 
-	nombre = prompt ("ingrese su nombre");
+	nombre = prompt ("Ingrese Su nombre:");
+
+
+	document.getElementById("elNombre").value = nombre;
 
 }
 
-  document.getElementById("elNombre").value = nombre;
+
+
+
+
 
