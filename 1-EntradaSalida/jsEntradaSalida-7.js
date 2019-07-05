@@ -93,4 +93,3 @@ function dividir()
 
     alert ("la division es " + resultado); 
 }
-

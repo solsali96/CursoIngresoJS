@@ -9,10 +9,10 @@ function mostrar()
 
     nombre = document.getElementById("elNombre").value;
 
-    nombre = document.getElementById("laEdad").value;
+    edad = document.getElementById("laEdad").value;
 
 
-    alert("Usted se llama ") + nombre + (" y tiene ") + edad + (" años");
+    alert("Usted se llama " + nombre + " y tiene " + edad + " años");
 
 
 	
