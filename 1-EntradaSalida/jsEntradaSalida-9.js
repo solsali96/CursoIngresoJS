@@ -8,18 +8,18 @@ function mostrarAumento() {
 
     var aumento;
 
-    var nuevoSueldo;
+    var resultado;
 
 
-    sueldo = parseInt(document.getElementById("sueldo").value);
+    sueldo = parseFloat(document.getElementById("sueldo").value);
 
-    aumento = sueldo * .1;
+    aumento = parseFloat(sueldo * 0.1);
 
-    nuevosueldo = sueldo + aumento;
+    resultado = sueldo + aumento;
 
-    document.getElementById("resultado").value = nuevoSueldo;
+    document.getElementById("resultado").value = resultado;
 
 
 
-	
+
 }
