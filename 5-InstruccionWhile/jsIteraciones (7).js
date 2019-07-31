@@ -3,38 +3,30 @@ function mostrar()
 
 	var contador=0;
 	var acumulador=0;
-	var respuesta='si';
+	var respuesta="si";
+	var numero;
 
-	while (seguir == 's') {
-		numero = parseInt (prompt ("Ingrese un numero: "));
-
-		while (isNaN(numero)) {
-
-			alert ("eso no es un numero");
-
-			numero = parseInt (prompt("Ingrese un numero"));
-
-
-
-	
+	do
+	{
+		numero = parseInt(prompt("Ingrese un número"));
+		while(isNaN(numero))
+		{
+			alert("Ingrese un numero valido");
+			numero = parseInt(prompt("Ingrese un número"));
 		}
-
 		acumulador = acumulador + numero;
 
 		contador ++;
 
-		seguir = prompt ("Quiere ingresar otro numero?");
+		respuesta = prompt("Quiere ingresar un nuevo número?")
 
-
+	}while(respuesta=="si");
 	
-	}
+	document.getElementById('suma').value=acumulador;
+	document.getElementById('promedio').value=acumulador/contador;
 
 
 
-	
 
-
-document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/contador;
 
 }//FIN DE LA FUNCIÓN
