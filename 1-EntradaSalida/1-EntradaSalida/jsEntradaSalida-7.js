@@ -4,46 +4,57 @@ mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
 function sumar()
 {	
-	var num1;
-	var num2;
+	var primerNumero;
+	var segundoNumero;
+	var suma;
 
-	num1 = parseInt(document.getElementById('numeroUno').value);
-	num2 = parseInt(document.getElementById('numeroDos').value);
+	primerNumero = parseInt(document.getElementById('numeroUno').value);
+	segundoNumero = parseInt(document.getElementById('numeroDos').value);
+	suma = parseInt( primerNumero + segundoNumero);
 
-	alert("La suma es: " + (num1 + num2));
+	alert("La suma es: " + suma);
+
+	
 }
 
 function restar()
 {
-	var num1;
-	var num2;
+	var primerNumero;
+	var segundoNumero;
+	var resta;
 
-	num1 = parseInt(document.getElementById('numeroUno').value);
-	num2 = parseInt(document.getElementById('numeroDos').value);
+	primerNumero = parseInt(document.getElementById('numeroUno').value);
+	segundoNumero = parseInt(document.getElementById('numeroDos').value);
+	resta = parseInt(primerNumero - segundoNumero);
+
+	alert("La resta es: " + resta);
 	
-	alert("La resta es: " + (num1 - num2));
 }
 
 function multiplicar()
 { 
-	var num1;
-	var num2;
+	var primerNumero;
+	var segundoNumero;
+	var multiplicacion;
 
-	num1 = parseInt(document.getElementById('numeroUno').value);
-	num2 = parseInt(document.getElementById('numeroDos').value);
+	primerNumero = parseInt(document.getElementById('numeroUno').value);
+	segundoNumero = parseInt(document.getElementById('numeroDos').value);
+	multiplicacion = parseInt(primerNumero *  segundoNumero);
 
-	alert("La multiplicacion es: " + (num1 * num2));
-	
+	alert("La multiplicacion es: " +  multiplicacion);
 }
 
 function dividir()
 {
-	var num1;
-	var num2;
+	var primerNumero;
+	var segundoNumero;
+	var division;
 
-	num1 = parseInt(document.getElementById('numeroUno').value);
-	num2 = parseInt(document.getElementById('numeroDos').value);
+	primerNumero = parseInt(document.getElementById('numeroUno').value);
+	segundoNumero = parseInt(document.getElementById('numeroDos').value);
+	division = parseInt(primerNumero / segundoNumero);
+
+	alert("La division es: " + division);
 	
-	alert("La division es: " + (num1 / num2));
 }
 
