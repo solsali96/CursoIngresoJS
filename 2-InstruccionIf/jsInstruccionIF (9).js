@@ -1,11 +1,10 @@
 function mostrar()
 {
+	var random;
 
-	var numeroRandom;
+	random = Math.floor((Math.random() * 10) + 1);
 
-	numeroRandom = Math.floor ( Math.random() * 10 + 1);
-
-	alert(numeroRandom);
+	alert(random);
 	
 
-}
+}//FIN DE LA FUNCIÓN
