@@ -12,41 +12,80 @@ function CalcularPrecio ()
 {
 	var cantLamparas;
 	var marca;
-	var impuesto;
-	var precioFinal;
 	var precioBruto;
+	var precioFinal;
 	var porcentaje;
+	var ingresosBrutos;
 
-	cantLamparas = document.getElementById('Cantidad').value;
+	cantLamparas  = document.getElementById('Cantidad').value;
 	cantLamparas = parseInt(cantLamparas);
-	precioBruto = impuesto * 35;
+	precioBruto = cantLamparas * 35;
 	marca = document.getElementById('Marca').value;
+	ingresosBrutos= parseInt(ingresosBrutos);
 
 	if (cantLamparas >5)
 	{
-		porcentaje= 50;
+		porcentaje = 50;
 	}
 	else
 	{
-		if(cantLamparas ==5)
+		if (cantLamparas == 5)
 		{
-			if(marca == "ArgentinaLuz")
+			if (marca == 'ArgentinaLuz')
 			{
-				porcentaje=40;
+				porcentaje = 40;
+			}
+			else  
+			{
+				porcentaje =30;
+			}
+		}
+		else
+		{
+			if (cantLamparas == 4)
+			{
+				if(marca == "ArgentinaLuz" || marca == 'FelipeLamparas')
+				{
+					porcentaje = 25;
+				}
+				else
+				{
+					porcentaje =20;
+				}
+
 			}
 			else
 			{
-				porcentaje = 30;
+				if(cantLamparas ==3)
+				{
+					if(marca == "ArgentinaLuz")
+					{
+						porcentaje =15;
+					}
+					else
+					{
+						if(marca == "FelipeLamparas")
+						{
+							porcentaje =10;
+						}
+						else
+						{
+							porcentaje=5;
+						}
+					}
+				}
 			}
 		}
 	}
 
-
-	precioFinal =precioBruto - precioBruto * porcentaje/100;
+	precioFinal = precioBruto - precioBruto *porcentaje/100;
 	document.getElementById('precioDescuento').value= precioFinal;
 
+	if (precioFinal >120)
+	{
+		ingresosBrutos = precioFinal + precioFinal * 10/100;
 
-
+		alert("IIBB Usted pago: " + ingresosBrutos + " siendo " + precioFinal +" el impuesto que se pagó.");
+	}
 
 }
-	
