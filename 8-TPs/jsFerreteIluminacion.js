@@ -10,82 +10,63 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-	var cantLamparas;
+	var cantDeLamparas;
 	var marca;
 	var precioBruto;
 	var precioFinal;
 	var porcentaje;
-	var ingresosBrutos;
 
-	cantLamparas  = document.getElementById('Cantidad').value;
-	cantLamparas = parseInt(cantLamparas);
-	precioBruto = cantLamparas * 35;
+	cantDeLamparas = document.getElementById('Cantidad').value;
+	cantDeLamparas=parseInt(cantDeLamparas);
+	precioBruto = cantDeLamparas *35;
 	marca = document.getElementById('Marca').value;
-	ingresosBrutos= parseInt(ingresosBrutos);
+	console.info("El precio bruto es: ", precioBruto);
+	porcentaje =0;
 
-	if (cantLamparas >5)
-	{
-		porcentaje = 50;
-	}
-	else
-	{
-		if (cantLamparas == 5)
-		{
-			if (marca == 'ArgentinaLuz')
-			{
-				porcentaje = 40;
+	switch(cantDeLamparas){
+		case 5:
+			switch(marca){
+				case "ArgentinaLuz":
+					porcentaje = 40;
+					break;
+				default:
+					porcentaje = 30;
+					break;
 			}
-			else  
-			{
-				porcentaje =30;
-			}
-		}
-		else
-		{
-			if (cantLamparas == 4)
-			{
-				if(marca == "ArgentinaLuz" || marca == 'FelipeLamparas')
-				{
-					porcentaje = 25;
-				}
-				else
-				{
+		case 4:
+			switch(marca){
+				case "ArgentinaLuz || “FelipeLamparas”":
+					porcentaje =25;
+					break;
+				default:
 					porcentaje =20;
-				}
-
+					break;		
 			}
-			else
-			{
-				if(cantLamparas ==3)
-				{
-					if(marca == "ArgentinaLuz")
-					{
-						porcentaje =15;
-					}
-					else
-					{
-						if(marca == "FelipeLamparas")
-						{
-							porcentaje =10;
-						}
-						else
-						{
-							porcentaje=5;
-						}
-					}
-				}
+		case 3:
+			switch(marca){
+				case "ArgentinaLuz":
+					porcentaje =15;
+					break;
+				case 'FelipeLamparas':
+					porcentaje =10;
+					break;
+				default:
+					porcentaje = 5;
+					break;	
 			}
-		}
-	}
+		case 2:
+		case 1:
+			porcentaje =0;
+			break;
+		default:
+			porcentaje =50;
+			break;			
+	}	
 
-	precioFinal = precioBruto - precioBruto *porcentaje/100;
-	document.getElementById('precioDescuento').value= precioFinal;
+	precioFinal = precioBruto - precioBruto * porcentaje /100;
+	console.info("El precio con descuento es: ", precioFinal); 
+	document.getElementById('precioDescuento').value = precioFinal;
 
-	if (precioFinal >120)
-	{
-		ingresosBrutos = precioFinal + precioFinal * 10/100;
 
-		alert("IIBB Usted pago: " + ingresosBrutos + " siendo " + precioFinal +" el impuesto que se pagó.");
-	}
-
+	
 }
