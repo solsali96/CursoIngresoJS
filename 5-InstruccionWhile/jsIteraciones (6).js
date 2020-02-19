@@ -5,20 +5,19 @@ function mostrar()
 	var acumulador=0;
 	var numero;
 
-	do
+	while(contador <5)
 	{
-		numero = parseInt(prompt("ingrese un numero "+ contador +"/5"));
-		while(isNaN(numero))
-		{
-			alert("Ingrese un numero valido");
-			numero = parseInt(prompt("ingrese un numero"+ contador +"/5"));
-		}
-		contador++;
-		acumulador = acumulador + numero;	
-	}while (contador<5);
+		numero=prompt("Ingrese un numero");
+		numero = parseInt(numero);
+
+		acumulador=acumulador+numero;
+		contador=contador+1;
+	}
+
+	
 
 
-document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/5;
+	document.getElementById('suma').value=acumulador;
+	document.getElementById('promedio').value=acumulador/5;
 
 }//FIN DE LA FUNCIÓN

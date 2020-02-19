@@ -1,15 +1,14 @@
 function mostrar()
 {
-	// var numeroIngresado=0;
-	// while(numeroIngresado>=0)
-	// {
-	// 	numeroIngresado-=1;
-	// 	alert(numeroIngresado);
-	// 	if (numeroIngresado>9)
-	// 	{
-	// 		break;
-	// 	}
-	// }
+	var contador;
+	contador=10;
+
+	while(contador >0)
+	{
+		console.log(contador);
+		contador =contador -1;
+		
+	}
 
 
 }//FIN DE LA FUNCIÓN

@@ -1,14 +1,11 @@
 function mostrar()
 {	
-	var numeroIngresado=0;
-	while(numeroIngresado>=0)
+	var contador;
+	contador=0;
+
+	while(contador <10)
 	{
-		numeroIngresado++;//solo suma o resta el valor 1
-		//numeroIngresado+=1;
-		alert(numeroIngresado);
-		if (numeroIngresado>9)
-		{
-			break;
-		}
+		contador =contador +1;
+		console.log(contador);
 	}
 }//FIN DE LA FUNCIÓN
