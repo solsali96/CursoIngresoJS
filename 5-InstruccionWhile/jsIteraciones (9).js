@@ -5,25 +5,37 @@ function mostrar()
 	var numero;
 	var maximo;
 	var minimo;
+
 	
 	var respuesta='si';
 
-	do
+	while(respuesta !='no')
 	{
-		numero = parseInt(prompt("Ingrese un numero"));
-		while(isNaN(numero))
+		contador= contador +1;
+		numero= prompt("Ingrese un numero");
+		numero= parseInt(numero);
+
+		if(contador ==1)
 		{
-			alert("ingrese un numero valido");
-			numero = parseInt(prompt("Ingrese un numero"));
+			maximo= numero;
+			minimo= numero;
+		}else
+		{
+			if(numero>maximo)
+			{
+				maximo=numero;
+			}
+			if(numero<minimo)
+			{
+				minimo = numero;
+			}
 		}
-		
+
+		respuesta= prompt("Ingrese no, para salir");
+	}
 
 
-		respuesta = prompt("Quiere ingresar otro numero?");
-
-	}while(respuesta=="si");
-
-	document.getElementById("maximo").Value=maximo;
+	document.getElementById("maximo").value=maximo;
 	document.getElementById("minimo").value=minimo; 
 
 

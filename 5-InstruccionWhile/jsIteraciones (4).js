@@ -3,8 +3,10 @@ function mostrar()
 
 	var numero;
 	numero = prompt("ingrese un número entre 0 y 10.");
+	numero=parseInt(numero);
+	var valorDeVerdad=isNaN(numero);
 
-	while(numero <0 || numero >10)
+	while(isNaN(numero) || numero <0 || numero >10)
 	{
 		alert("error");
 		numero =prompt("Ingrese un numero entre 0 y 10.");

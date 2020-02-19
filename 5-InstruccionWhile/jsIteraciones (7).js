@@ -6,21 +6,17 @@ function mostrar()
 	var respuesta="si";
 	var numero;
 
-	do
+	while(respuesta == "si")
 	{
-		numero = parseInt(prompt("Ingrese un número"));
-		while(isNaN(numero))
-		{
-			alert("Ingrese un numero valido");
-			numero = parseInt(prompt("Ingrese un número"));
-		}
-		acumulador = acumulador + numero;
+		numero = prompt("Ingrese un numero");
+		numero = parseInt(numero);
 
-		contador ++;
+		contador= contador+1;
+		acumulador=acumulador+numero;
 
-		respuesta = prompt("Quiere ingresar un nuevo número?")
+		respuesta= prompt("Ingrese 'si' para seguir ingresando numero, de lo contrario sale");
+	}
 
-	}while(respuesta=="si");
 	
 	document.getElementById('suma').value=acumulador;
 	document.getElementById('promedio').value=acumulador/contador;
